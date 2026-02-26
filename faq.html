@@ -3,31 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - MakeMyFranchise | Franchise Advisory Experts</title>
-  <meta name="description" content="Find answers to frequently asked questions about franchise investing, our advisory process, and how MakeMyFranchise helps you make smarter franchise decisions.">
+  <title>Franchise FAQ - Common Questions Answered | MakeMyFranchise</title>
+  <meta name="description" content="Answers to the most common franchise investment questions. Get clarity before you invest.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
+<body>  <header class="header" id="header">
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <div class="logo-icon">M</div>
-          MakeMyFranchise
+          <img src="images/logo.jpeg" alt="MakeMyFranchise Logo" class="logo-img">
+          <span class="logo-text">MakeMyFranchise</span>
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="has-dropdown">
+            <a href="investors.html">Find Franchise<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="investors.html#profile">Investor Profiling</a></li>
+              <li><a href="investors.html#compare">Sector Comparison</a></li>
+              <li><a href="investors.html#score">Suitability Score</a></li>
+              <li><a href="investors.html#mistakes">5 Mistakes to Avoid</a></li>
+              <li><a href="investors.html#reality">Investment Reality Check</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="investors.html">For Investors<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="investors.html#profile">Profile Yourself</a></li>
+              <li><a href="investors.html#compare">Food vs Salon vs Education</a></li>
+              <li><a href="investors.html#score">Suitability Score Calculator</a></li>
+              <li><a href="investors.html#mistakes">Biggest Investor Mistakes</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="franchisors.html">For Brands<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="franchisors.html">Expand Your Brand</a></li>
+              <li><a href="franchisors.html#network">National Partner Network</a></li>
+              <li><a href="franchisors.html#partners">Become a City Partner</a></li>
+              <li><a href="franchisors.html#process">Brand Onboarding Process</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="faq.html" class="active">FAQ</a></li>
-          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Get Started</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Free Consultation</a></li>
         </ul>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -36,187 +58,194 @@
     </div>
   </header>
 
-  <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="container">
-      <h1 class="fade-in">Frequently Asked Questions</h1>
-      <p class="fade-in">Everything you need to know about franchise investing and our advisory process</p>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Frequently Asked Questions</div>
+      <h1>Your Franchise Questions, <span>Answered Honestly</span></h1>
+      <p>We answer the questions investors actually ask &mdash; without sugar-coating. Because the right information before investing protects your capital and your future.</p>
     </div>
   </section>
 
-  <!-- ========== FAQ SECTION ========== -->
-  <section class="faq-section">
+  <section class="section">
     <div class="container">
-      <div class="faq-list stagger-children">
+      <div class="faq-container fade-in">
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>What exactly does MakeMyFranchise do?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            What exactly does MakeMyFranchise do?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>MakeMyFranchise is a specialized franchise advisory firm that helps investors find the right franchise opportunities and helps brands scale through franchising. We provide franchise advisory & matchmaking, franchisor growth consulting, investment feasibility & ROI analysis, legal & operational support, and location & market planning. Our approach is consultative and data-driven — we recommend what fits you, not the market trend.</p>
-            </div>
+            <p>MakeMyFranchise is a franchise advisory and matchmaking platform. Unlike portals that list brands and earn commissions for every referral, we work as your strategic advisor. We profile your budget, city, experience and goals &mdash; then recommend franchises that genuinely match your profile. We also help brands expand responsibly by qualifying investors before introductions. We guide you from discovery to documentation to launch.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Who are your services designed for?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            What is the difference between a franchise advisor and a franchise broker?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Our services are designed for two groups: <strong>Franchise Investors</strong> — first-time entrepreneurs, professionals seeking side income, families entering business, or investors testing entrepreneurship; and <strong>Franchisors</strong> — brands looking to expand their network with qualified franchise partners across new markets and cities in India.</p>
-            </div>
+            <p>A franchise broker earns commission from brands for every investor they send &mdash; which creates an obvious conflict of interest. They push whoever pays the highest commission, not what suits you best. A franchise advisor like MakeMyFranchise earns your trust by recommending what genuinely fits your profile. We evaluate options based on your budget, city demand, operational capacity and risk appetite &mdash; not based on who pays us more. This difference can save you lakhs and years of struggle.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>How does the consultation process work?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            Is franchise business profitable in India?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Our process is simple: (1) Complete your profile — we understand your goals, experience, and investment range. (2) We create a personalized shortlist of vetted franchise brands. (3) Deep evaluation with market insights, ROI expectations, and risk mapping. (4) Direct brand introductions to explore franchise models. (5) Deal support from negotiation to documentation. (6) Launch & beyond — rollout planning and ongoing support.</p>
-            </div>
+            <p>Yes &mdash; if chosen and operated correctly. Strong brands combined with the right market and efficient operations can deliver good returns. However, many investors struggle because they choose based on hype rather than feasibility, underestimate working capital, or select wrong locations. The key insight from our advisory experience is this: profitability is largely decided at the selection stage, not after opening. Choose right, and the odds are significantly in your favour.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Is franchise business profitable in India?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            How much investment is required to start a franchise?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Yes — if chosen and operated correctly. Profitability depends on the right brand + right market + efficient operations. Many franchisees struggle due to poor fit, unrealistic expectations, or weak research. That's why profitability is decided at the selection stage, not after opening. Our ROI-based evaluation ensures you invest in opportunities with realistic and sustainable returns.</p>
-            </div>
+            <p>Franchise investments in India can start from under &#8377;5 lakhs for small service models and go up to several crores for premium formats. Most good franchise opportunities are available in the &#8377;10&ndash;50 lakh range. However, the important number is not just the franchise fee &mdash; it is the total investment including setup, equipment, licensing, working capital for 3&ndash;6 months and local marketing. We help you build a realistic total cost picture before you commit.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>What franchise options are available under ₹10 Lakhs?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            Which sector gives the fastest break-even?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Businesses under ₹10 Lakhs typically include kiosk or compact retail formats, distribution & dealership models, service-based businesses, small F&B takeaway formats, and education support services. While entry cost is lower, profitability depends on local demand and cost management. We help evaluate which low-investment options are genuinely viable for your city and involvement capacity.</p>
-            </div>
+            <p>There is no universal answer &mdash; break-even depends on rent, demand, pricing, management efficiency and competitive landscape. Be very cautious of any advisor who guarantees specific timelines. In our experience, well-chosen and well-operated food businesses can break even in 12&ndash;18 months; salon and wellness businesses in 10&ndash;18 months; education businesses in 12&ndash;24 months. We help you model realistic scenarios for your specific city and investment amount.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>What are the biggest mistakes franchise buyers make?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            What are the biggest mistakes first-time franchise investors make?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>The most common mistakes include: believing marketing promises without verification, ignoring working capital requirements, choosing the wrong location, underestimating personal involvement needed, selecting a brand with weak post-sale support, and not seeking professional advice. Most franchise failures are preventable with proper evaluation and expert guidance.</p>
-            </div>
+            <p>The five biggest mistakes we see repeatedly: (1) Choosing based on brand hype and social media rather than unit economics. (2) Ignoring working capital needs &mdash; most budget only for setup. (3) Poor location selection based on affordability of rent rather than footfall analysis. (4) Underestimating operational involvement &mdash; assuming it&rsquo;s passive when it requires full-time attention initially. (5) Not getting professional advice before investing. All five are preventable with proper due diligence.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>What makes MakeMyFranchise different from franchise listing platforms?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            Food franchise vs salon franchise &mdash; which is better?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Unlike listing platforms that simply display franchise options, we are <strong>franchise strategists and advisors</strong>. We don't sell franchises — we help you choose the right one. Our differences: strategy-first assessment vs. random listings, data-driven evaluation vs. advertiser-paid placement, personalized recommendations vs. generic catalogs, and end-to-end advisory vs. just lead generation. Think of us as franchise consultants, not a marketplace.</p>
-            </div>
+            <p>Neither is universally better &mdash; they suit different investors. Food businesses have higher transaction volume but tighter margins, greater operational complexity and extreme location sensitivity. Salon businesses have more predictable billing, repeat customers and structured appointments but rely heavily on stylist retention. Choose food if you enjoy fast-paced daily operations. Choose salon if you prefer structured, relationship-driven business. We recommend based on your actual profile, not trends.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Do you work with franchises across India?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            How does MakeMyFranchise evaluate whether a franchise is right for me?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Yes, we work with franchise brands and investors across India, covering metropolitan areas as well as tier-2 and tier-3 cities. Our advisory spans 8+ industry sectors including Food & Beverage, Education, Retail, Health & Wellness, Business Services, Entertainment, Fitness, and Distribution. We provide location-specific analysis to ensure your franchise thrives in its intended market.</p>
-            </div>
+            <p>We use our proprietary Suitability Score System &mdash; a weighted scoring model across 7 parameters: budget match (25%), city potential (15%), experience fit (15%), industry interest (15%), risk appetite (10%), time involvement (10%) and scale ambition (10%). Each parameter is rated 1&ndash;10, multiplied by its weight, and summed to give a score out of 10. This tells you not whether a brand is good &mdash; but whether it is good for YOU.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>How much do your advisory services cost?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            How important is location for franchise success?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Our initial consultation is free. For ongoing advisory services, pricing is customized based on the scope of engagement. The best way to get started is to register for a free consultation call where we understand your requirements and provide a transparent breakdown of how we can help — with no hidden costs or obligations.</p>
-            </div>
+            <p>Critically important. Even strong national brands fail in weak locations. We evaluate footfall, catchment area demographics, proximity to competition, affordability of your target customers and the rent-to-revenue ratio before recommending any location. A &#8377;1 lakh monthly rent that generates &#8377;7 lakh revenue is not the same proposition as the same rent generating &#8377;3 lakh revenue. Location is where many franchise investments win or lose.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <span>How does location affect franchise success?</span>
-            <i data-lucide="chevron-down" class="faq-chevron"></i>
+            I want to expand my brand through franchising. How do you help?
+            <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Location is one of the biggest determinants of franchise success. Even strong brands can fail in weak locations. We evaluate footfall patterns, catchment area demographics, local competition, and affordability metrics before recommending any location. Our market planning service ensures you don't just pick a franchise — you pick the right place for it.</p>
-            </div>
+            <p>We provide a full expansion service for franchise brands: expansion roadmap and territory strategy, investor qualification and screening, franchise documentation support, brand positioning for investor-facing communications, direct introductions to qualified investors, and post-signing support to ensure your new franchisees succeed. We also offer a national city partner network for brands wanting wider geographical reach without the cost of opening offices everywhere.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does your advisory service cost?
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Your first consultation is completely free. We discuss your goals, profile your investment capacity and give you an initial sense of what franchise categories suit you. For deep advisory, investor profiling, feasibility analysis and brand introductions, we work on a structured engagement basis discussed transparently upfront. The cost of proper advisory is always a fraction of the cost of a wrong franchise choice. Contact us to discuss.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What sectors does MakeMyFranchise cover?
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We cover Food &amp; Beverage (QSR, cafes, cloud kitchens, casual dining), Salon &amp; Wellness (premium to budget formats), Education &amp; Training (preschools, K-12, skill development, test prep), Retail &amp; FMCG, Health &amp; Wellness (diagnostics, pharmacy, preventive health), Fitness &amp; Sports, Business Services (financial, logistics, staffing) and Entertainment &amp; Leisure. Our recommendations across all sectors are backed by market demand analysis, not just brand marketing material.</p>
           </div>
         </div>
 
       </div>
-
-      <div style="text-align: center; margin-top: 48px;">
-        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 20px;">Still have questions? We're here to help.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Talk to a Franchise Expert</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA ========== -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="fade-in">
-        <h2>Ready to Make Smarter Franchise Decisions?</h2>
-        <p>MakeMyFranchise — The IIM Way, Built by IITians</p>
-        <a href="contact.html" class="btn btn-white btn-lg">Start Your Journey Today</a>
+      <div style="text-align:center;margin-top:48px;">
+        <p style="font-size:1.1rem;color:var(--text-light);margin-bottom:20px;">Still have questions? We&rsquo;re here to help.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Talk to a Franchise Expert &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <h3>MakeMyFranchise</h3>
-          <p>The IIM Way, Built by IITians. Your strategic partner in franchising across India.</p>
+          <a href="index.html" class="logo footer-logo">
+            <img src="images/logo.jpeg" alt="MakeMyFranchise" class="logo-img logo-img-sm">
+            <span class="logo-text">MakeMyFranchise</span>
+          </a>
+          <p>India&rsquo;s Most Trusted Franchise Advisory Platform. The IIM Way, Built by IITians. We don&rsquo;t sell franchises &mdash; we help you choose the right one.</p>
+          <div class="footer-contact">
+            <p><i data-lucide="phone" class="footer-icon"></i> +91 9168516666</p>
+            <p><i data-lucide="mail" class="footer-icon"></i> info@makemyfranchise.in</p>
+          </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-          <a href="faq.html">FAQ</a>
+          <h4>For Investors</h4>
+          <ul>
+            <li><a href="investors.html#profile">Investor Profiling</a></li>
+            <li><a href="investors.html#compare">Sector Comparison</a></li>
+            <li><a href="investors.html#score">Suitability Score</a></li>
+            <li><a href="investors.html#mistakes">5 Mistakes to Avoid</a></li>
+            <li><a href="investors.html#reality">Investment Reality Check</a></li>
+          </ul>
         </div>
-        <div class="footer-contact">
-          <h4>Contact Us</h4>
-          <p>Ready to start your franchise journey?</p>
-          <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <div class="footer-links">
+          <h4>For Brands</h4>
+          <ul>
+            <li><a href="franchisors.html">Expand Your Brand</a></li>
+            <li><a href="franchisors.html#network">National Partner Network</a></li>
+            <li><a href="franchisors.html#partners">Become a City Partner</a></li>
+            <li><a href="franchisors.html#process">Brand Onboarding</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html#vision">Our Vision</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MakeMyFranchise. All rights reserved.</p>
+        <p>&copy; 2026 MakeMyFranchise. All rights reserved. | India&rsquo;s Franchise Advisory Experts</p>
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

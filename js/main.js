@@ -39,12 +39,38 @@ function initMobileMenu() {
     navLinks.classList.toggle('open');
   });
 
-  // Close menu when a link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
+  // Mobile: tap on dropdown parent toggles submenu
+  navLinks.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const item = link.closest('.has-dropdown');
+        const wasOpen = item.classList.contains('open');
+        // Close all
+        navLinks.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
+
+  // Close menu when a non-parent link is clicked
+  navLinks.querySelectorAll('a:not(.has-dropdown > a)').forEach(link => {
     link.addEventListener('click', () => {
       toggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navLinks.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
     });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown') && window.innerWidth > 768) {
+      navLinks.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
+    }
+    if (!e.target.closest('.navbar') && window.innerWidth <= 768) {
+      toggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    }
   });
 
   // Close menu on resize to desktop
@@ -52,6 +78,7 @@ function initMobileMenu() {
     if (window.innerWidth > 768) {
       toggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navLinks.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
     }
   });
 }
@@ -120,8 +147,8 @@ function handleFormSubmit(event) {
   const data = Object.fromEntries(formData);
 
   // Simple validation
-  if (!data.name || !data.email || !data.phone || !data.message) {
-    showNotification('Please fill in all required fields.', 'error');
+  if (!data.name || !data.email || !data.phone) {
+    showNotification('Please fill in your name, email and phone number.', 'error');
     return;
   }
 
@@ -183,6 +210,31 @@ function showNotification(message, type = 'success') {
       setTimeout(() => notification.remove(), 300);
     }
   }, 5000);
+}
+
+/* ---------- Hero Enquiry Form ---------- */
+function handleHeroEnquiry(event) {
+  event.preventDefault();
+  const form = event.target;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
+
+  if (!data.name || !data.mobile) {
+    showNotification('Please enter your name and mobile number.', 'error');
+    return;
+  }
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Submitting…';
+  submitBtn.disabled = true;
+
+  setTimeout(() => {
+    showNotification('Thank you! A franchise expert will call you within 24 hours.', 'success');
+    form.reset();
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }, 1200);
 }
 
 // Add notification animation

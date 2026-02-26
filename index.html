@@ -3,33 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MakeMyFranchise | Franchise Opportunities & Advisory in India</title>
-  <meta name="description" content="Discover profitable franchise opportunities with expert guidance. Make informed investment decisions with India's strategic franchise advisory platform.">
+  <title>Franchise Opportunities & Advisory in India | MakeMyFranchise</title>
+  <meta name="description" content="Discover profitable franchise opportunities with expert guidance. The IIM Way, Built by IITians. Search from 1000+ franchise options across India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
+<body>  <header class="header" id="header">
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <div class="logo-icon">M</div>
-          MakeMyFranchise
+          <img src="images/logo.jpeg" alt="MakeMyFranchise Logo" class="logo-img">
+          <span class="logo-text">MakeMyFranchise</span>
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li class="nav-cta">
-            <a href="contact.html" class="btn btn-primary">Get Started</a>
+          <li class="has-dropdown">
+            <a href="investors.html">Find Franchise<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="investors.html#profile">Investor Profiling</a></li>
+              <li><a href="investors.html#compare">Sector Comparison</a></li>
+              <li><a href="investors.html#score">Suitability Score</a></li>
+              <li><a href="investors.html#mistakes">5 Mistakes to Avoid</a></li>
+              <li><a href="investors.html#reality">Investment Reality Check</a></li>
+            </ul>
           </li>
+          <li class="has-dropdown">
+            <a href="investors.html">For Investors<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="investors.html#profile">Profile Yourself</a></li>
+              <li><a href="investors.html#compare">Food vs Salon vs Education</a></li>
+              <li><a href="investors.html#score">Suitability Score Calculator</a></li>
+              <li><a href="investors.html#mistakes">Biggest Investor Mistakes</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="franchisors.html">For Brands<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="franchisors.html">Expand Your Brand</a></li>
+              <li><a href="franchisors.html#network">National Partner Network</a></li>
+              <li><a href="franchisors.html#partners">Become a City Partner</a></li>
+              <li><a href="franchisors.html#process">Brand Onboarding Process</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Free Consultation</a></li>
         </ul>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -38,7 +58,7 @@
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -47,226 +67,480 @@
             <span class="hero-badge-dot"></span>
             The IIM Way, Built by IITians
           </div>
-          <h1>Empowering <span>Smart Franchise</span> Decisions</h1>
-          <p class="hero-subtitle">Your strategic partner in franchising — where data, business strategy, and execution expertise meet to help you <strong>choose, evaluate and scale franchise businesses</strong> with confidence.</p>
-          <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-primary btn-lg">Start Your Franchise Journey</a>
-            <a href="services.html" class="btn btn-outline btn-lg">Our Services</a>
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat"><h3>100+</h3><p>Franchise Brands</p></div>
-            <div class="hero-stat"><h3>50+</h3><p>Cities Covered</p></div>
-            <div class="hero-stat"><h3>8+</h3><p>Industry Sectors</p></div>
+          <h1>India&rsquo;s Most Trusted <span>Franchise Advisory</span> Platform</h1>
+          <p class="hero-subtitle">Your strategic partner in franchising &mdash; where data, business strategy and execution expertise meet to help you <strong>choose, evaluate and scale</strong> franchise businesses with confidence.</p>
+          <!-- Inline Enquiry Form (RTF-inspired) -->
+          <div class="hero-enquiry-form">
+            <h3>Find Your Perfect Franchise</h3>
+            <form class="hero-form" onsubmit="handleHeroEnquiry(event)">
+              <div class="hero-form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                <select name="budget">
+                  <option value="" disabled selected>Investment Budget</option>
+                  <option>Under &#8377;10 Lakhs</option>
+                  <option>&#8377;10&ndash;20 Lakhs</option>
+                  <option>&#8377;20&ndash;50 Lakhs</option>
+                  <option>&#8377;50 Lakhs&ndash;1 Cr</option>
+                  <option>Above &#8377;1 Crore</option>
+                </select>
+                <select name="sector">
+                  <option value="" disabled selected>Preferred Sector</option>
+                  <option>Food &amp; Beverage</option>
+                  <option>Salon &amp; Wellness</option>
+                  <option>Education &amp; Training</option>
+                  <option>Retail &amp; FMCG</option>
+                  <option>Healthcare</option>
+                  <option>Fitness &amp; Sports</option>
+                  <option>Business Services</option>
+                  <option>Any Sector</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Enquire Now &rarr;</button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="hero-image fade-in-right">
-          <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="Franchise Strategy Consultation">
-            <div class="hero-image-overlay"><p>Strategic Franchise Advisory Across India</p></div>
+
+        <!-- RIGHT: Visual Panel -->
+        <div class="hero-visual fade-in">
+          <div class="hv-card">
+            <div class="hv-card-header">
+              <i data-lucide="shield-check"></i>
+              <strong>Why MakeMyFranchise?</strong>
+            </div>
+            <ul class="hv-list">
+              <li><i data-lucide="check-circle"></i> Data-backed suitability scoring, not guesswork</li>
+              <li><i data-lucide="check-circle"></i> Conflict-free advisory &mdash; we earn your trust, not brand commissions</li>
+              <li><i data-lucide="check-circle"></i> End-to-end handholding from discovery to launch</li>
+              <li><i data-lucide="check-circle"></i> 500+ verified brands across 8 high-growth sectors</li>
+              <li><i data-lucide="check-circle"></i> Personalised investor profiling &amp; feasibility analysis</li>
+            </ul>
+            <div class="hv-stats">
+              <div class="hv-stat"><span class="hv-num">500+</span><span>Brands</span></div>
+              <div class="hv-stat"><span class="hv-num">1000+</span><span>Options</span></div>
+              <div class="hv-stat"><span class="hv-num">50+</span><span>Cities</span></div>
+            </div>
+            <div class="hv-sectors">
+              <span>&#127829; Food</span>
+              <span>&#9986; Salon</span>
+              <span>&#128218; Education</span>
+              <span>&#128717; Retail</span>
+              <span>&#10084; Health</span>
+              <span>&#128170; Fitness</span>
+              <span>+more</span>
+            </div>
+            <div class="hv-trust">
+              <span><i data-lucide="award"></i> IIM-Level Strategy</span>
+              <span><i data-lucide="cpu"></i> IIT-Built Systems</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Verified Brands</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Franchise Options</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Cities Covered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Conflict-Free Advisory</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE BELIEF BANNER -->
+  <section class="belief-banner">
+    <div class="container">
+      <p>&ldquo;There is no best franchise &mdash; only the <strong>best franchise for YOU.</strong> We use data, strategy and deep market intelligence to find it.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SERVICES WE PROVIDE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">What We Do</span>
+        <h2>Exclusive Services For Your Business</h2>
+        <p>From discovery to launch &mdash; end-to-end franchise advisory built on strategy, not sales.</p>
+      </div>
+      <div class="services-grid stagger-children">
+        <div class="service-card">
+          <div class="card-icon"><i data-lucide="search"></i></div>
+          <h3>Franchise Advisory &amp; Matchmaking</h3>
+          <p>We assess your profile, goals and capital to recommend franchise models aligned with your reality, not hype. Personalised shortlisting based on city demand and investor fit.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><i data-lucide="bar-chart-2"></i></div>
+          <h3>Investment Feasibility &amp; ROI Analysis</h3>
+          <p>Detailed market and financial analysis to ensure your franchise choice is economically sound. We map break-even, margins, risks and realistic timelines before you invest.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><i data-lucide="trending-up"></i></div>
+          <h3>Franchisor Growth Consulting</h3>
+          <p>From expansion planning to partner qualification, we help brands enter new markets with the right franchisees. Structured expansion roadmap and territory strategy.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><i data-lucide="map-pin"></i></div>
+          <h3>Location &amp; Market Planning</h3>
+          <p>Precise regional analysis to ensure your franchise thrives in its intended market. We evaluate footfall, catchment area, competition and affordability before recommending.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><i data-lucide="file-text"></i></div>
+          <h3>Legal &amp; Operational Support</h3>
+          <p>Assistance with franchise documentation, operational readiness and compliance frameworks. We help investors present themselves professionally to brands.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><i data-lucide="users"></i></div>
+          <h3>Brand Connect &amp; Deal Support</h3>
+          <p>We connect you directly with shortlisted brands via calls, virtual meetings and face-to-face discussions. We guide you from negotiation to documentation to launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO PATHS: INVESTORS & FRANCHISORS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Who We Serve</span>
+        <h2>Two Journeys. One Expert Partner.</h2>
+        <p>Whether you want to invest in a franchise or expand your brand &mdash; we have a dedicated path for you.</p>
+      </div>
+      <div class="cards-grid stagger-children">
+        <div class="card audience-card">
+          <div class="card-icon card-icon-gold"><i data-lucide="briefcase"></i></div>
+          <h3>I Want to Invest</h3>
+          <p>Looking for the right franchise opportunity? We profile your budget, city, risk appetite and goals &mdash; then match you with franchises that actually suit you.</p>
+          <ul class="check-list" style="margin:16px 0;">
+            <li>Personalised investor profiling</li>
+            <li>Suitability score for each brand</li>
+            <li>Food vs Salon vs Education comparison</li>
+            <li>5 mistakes framework</li>
+            <li>Investment reality check</li>
+          </ul>
+          <a href="investors.html" class="btn btn-primary" style="margin-top:8px;">Start Investor Journey &rarr;</a>
+        </div>
+        <div class="card audience-card">
+          <div class="card-icon card-icon-gold"><i data-lucide="store"></i></div>
+          <h3>I Want to Expand My Brand</h3>
+          <p>Ready to franchise your business? We help brands build structured expansion strategies, qualify the right partners and enter new markets confidently.</p>
+          <ul class="check-list" style="margin:16px 0;">
+            <li>Franchise expansion roadmap</li>
+            <li>Partner qualification system</li>
+            <li>Territory &amp; city strategy</li>
+            <li>National partner network access</li>
+            <li>Ongoing franchisee support</li>
+          </ul>
+          <a href="franchisors.html" class="btn btn-primary" style="margin-top:8px;">Expand Your Brand &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANCHISE SECTORS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Franchise Opportunities</span>
+        <h2>Explore Sectors Across India</h2>
+        <p>We connect investors with vetted franchise options across 8 high-growth industries &mdash; backed by market demand, not just brand marketing.</p>
+      </div>
+      <div class="sectors-grid stagger-children">
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="utensils"></i></div>
+          <h3>Food &amp; Beverage</h3>
+          <p>QSR, cafes, cloud kitchens, casual dining &amp; specialty concepts</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="scissors"></i></div>
+          <h3>Salon &amp; Wellness</h3>
+          <p>Premium, mid-segment &amp; budget salon formats; spa &amp; grooming</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="book-open"></i></div>
+          <h3>Education &amp; Training</h3>
+          <p>Preschool, K-12, skill development, test prep &amp; EdTech centres</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="shopping-bag"></i></div>
+          <h3>Retail &amp; FMCG</h3>
+          <p>Fashion, footwear, consumer goods &amp; specialty retail formats</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="heart-pulse"></i></div>
+          <h3>Health &amp; Wellness</h3>
+          <p>Diagnostics, pharmacy, preventive health &amp; wellness clinics</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="dumbbell"></i></div>
+          <h3>Fitness &amp; Sports</h3>
+          <p>Gyms, sports training academies, yoga studios &amp; active lifestyle</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="briefcase"></i></div>
+          <h3>Business Services</h3>
+          <p>Financial services, logistics, staffing &amp; professional services</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon"><i data-lucide="music"></i></div>
+          <h3>Entertainment &amp; Leisure</h3>
+          <p>Gaming zones, kids entertainment, events &amp; experiential retail</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="investors.html#compare" class="btn btn-primary">Compare Sectors In Detail &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK (RTF: Way We Work) -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Way We Work</span>
+        <h2>Your Franchise Journey, Simplified</h2>
+        <p>A structured, transparent process from your first conversation to a successful launch.</p>
+      </div>
+      <div class="steps-grid stagger-children">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>Complete Your Profile</h3>
+          <p>We understand your goals, investment range, city preferences, experience background and risk appetite through a structured profiling exercise.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>Personalised Shortlisting</h3>
+          <p>Receive a vetted list of franchise brands that match your investor profile and goals &mdash; not based on commission but on genuine fit.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>Deep Evaluation</h3>
+          <p>Get market and financial insights, ROI expectations, break-even analysis, competition mapping and risk assessment for each shortlisted option.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h3>Brand Introductions</h3>
+          <p>Connect directly with selected brands via calls, virtual meetings and face-to-face discussions. We facilitate and guide every interaction.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">05</div>
+          <h3>Deal Support</h3>
+          <p>We guide you from negotiation through documentation, agreement review and finalisation. Expert support at every critical decision point.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">06</div>
+          <h3>Launch &amp; Beyond</h3>
+          <p>We don&rsquo;t leave you at purchase. We help with rollout planning, brand support coordination and ongoing advisory for sustainable performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARE YOU A BRAND? (RTF-inspired) -->
+  <section class="section brand-cta-section">
+    <div class="container">
+      <div class="brand-cta-split fade-in">
+        <div class="brand-cta-text">
+          <span class="section-tag">For Franchisors</span>
+          <h2>Are You a Brand Ready to Expand?</h2>
+          <p>India&rsquo;s franchise economy is growing fast. But successful expansion requires qualified investors, structured systems and the right partner network &mdash; not just advertisements.</p>
+          <p style="margin-top:12px;">MakeMyFranchise brings you serious, profile-matched investors who are ready to invest &mdash; filtered by budget, city viability and operational readiness.</p>
+          <div class="brand-cta-features">
+            <div class="brand-feature">
+              <i data-lucide="shield-check"></i>
+              <span><strong>Handholding Support</strong> &mdash; Our expert counsellors provide profile-based investor recommendations aligned with brand requirements</span>
+            </div>
+            <div class="brand-feature">
+              <i data-lucide="network"></i>
+              <span><strong>Recommendations</strong> &mdash; We bridge the gap between your brand and chosen investors to initiate deal negotiations and finalise commercials</span>
+            </div>
+            <div class="brand-feature">
+              <i data-lucide="phone-call"></i>
+              <span><strong>Brand Connect</strong> &mdash; Direct connections via calls, virtual meetings and face-to-face sessions to eliminate disconnect on commercials</span>
+            </div>
+          </div>
+          <a href="franchisors.html" class="btn btn-primary" style="margin-top:24px;">Partner With Us &rarr;</a>
+        </div>
+        <div class="brand-cta-stats">
+          <div class="brand-stat-card">
+            <span class="brand-stat-num">500+</span>
+            <span class="brand-stat-label">Brands in Our Network</span>
+          </div>
+          <div class="brand-stat-card">
+            <span class="brand-stat-num">50+</span>
+            <span class="brand-stat-label">Cities &amp; Towns</span>
+          </div>
+          <div class="brand-stat-card">
+            <span class="brand-stat-num">100%</span>
+            <span class="brand-stat-label">Verified Investor Profiles</span>
+          </div>
+          <div class="brand-stat-card">
+            <span class="brand-stat-num">3&times;</span>
+            <span class="brand-stat-label">Higher Closure Rate</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== INTRO ========== -->
-  <section class="framework">
+  <!-- WHY CHOOSE MAKEMYFRANCHISE -->
+  <section class="section section-alt">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Who We Are</span>
-        <h2>A Consultative Approach to Franchising</h2>
-        <p>At MakeMyFranchise, we believe franchising should be built on clarity, proven strategy, and deep business insight. Unlike platforms that simply list brands, we take a consultative approach — helping you find right-fit opportunities based on your investment goals, background, and growth aspirations.</p>
+        <span class="section-tag">Why Choose Us</span>
+        <h2>We Don&rsquo;t Sell Franchises. We Help You Choose One.</h2>
+        <p>The difference between a franchise advisor and a franchise broker can save you lakhs and years of struggle.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ========== WHY CHOOSE US ========== -->
-  <section class="challenges">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Our Advantage</span>
-        <h2>Why Choose MakeMyFranchise?</h2>
-        <p>We are not franchise sellers — we are franchise strategists and advisors.</p>
-      </div>
-      <div class="cards-grid cards-grid-2 stagger-children">
+      <div class="cards-grid stagger-children">
         <div class="card">
-          <div class="card-icon card-icon-gold"><i data-lucide="search"></i></div>
+          <div class="card-icon card-icon-gold"><i data-lucide="target"></i></div>
           <h3>Strategy-First Assessment</h3>
-          <p>Thorough evaluation of business opportunities using data-driven methodologies before any recommendation is made.</p>
+          <p>Every recommendation starts with understanding your goals, budget and market &mdash; not with pushing the highest-commission brand. Data-driven decisions over emotional buying.</p>
         </div>
         <div class="card">
-          <div class="card-icon card-icon-gold"><i data-lucide="bar-chart-3"></i></div>
-          <h3>Data-Driven Franchise Evaluation</h3>
-          <p>Every franchise option is assessed using market demand, investment feasibility, and ROI analysis.</p>
+          <div class="card-icon card-icon-gold"><i data-lucide="database"></i></div>
+          <h3>Data Intelligence</h3>
+          <p>Our suitability scoring model evaluates 7 weighted parameters &mdash; budget match, city potential, experience fit, risk appetite and more &mdash; to quantify franchise compatibility.</p>
         </div>
         <div class="card">
           <div class="card-icon card-icon-gold"><i data-lucide="user-check"></i></div>
-          <h3>Personalized Recommendations</h3>
-          <p>Tailored franchise suggestions based on your capital, city potential, and personal involvement capacity.</p>
+          <h3>Personalised Advisory</h3>
+          <p>No cookie-cutter recommendations. Your franchise journey is designed around your reality &mdash; your city, your capital, your involvement capacity and your growth ambitions.</p>
         </div>
         <div class="card">
           <div class="card-icon card-icon-gold"><i data-lucide="handshake"></i></div>
           <h3>End-to-End Handholding</h3>
-          <p>From discovery to launch, we guide you through every stage of your franchise journey.</p>
+          <p>From discovery to documentation to launch &mdash; we are with you at every step. We don&rsquo;t leave you after the introduction. We ensure your franchise actually succeeds.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FRANCHISE SECTORS ========== -->
-  <section class="framework">
+  <!-- ADVISOR VS BROKER -->
+  <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Opportunities</span>
-        <h2>Franchise Sectors We Cover</h2>
-        <p>We connect investors with a wide range of vetted franchise options spanning industries across India.</p>
+        <span class="section-tag">Our Philosophy</span>
+        <h2>Franchise Advisor vs Franchise Broker</h2>
+        <p>Understanding this difference can save you lakhs and years of mistakes.</p>
       </div>
-      <div class="sectors-grid stagger-children">
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="utensils"></i></div>
-          <h3>Food &amp; Beverage</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="graduation-cap"></i></div>
-          <h3>Education &amp; Training</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="shopping-bag"></i></div>
-          <h3>Retail &amp; FMCG</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="heart-pulse"></i></div>
-          <h3>Health &amp; Wellness</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="briefcase"></i></div>
-          <h3>Business Services</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="clapperboard"></i></div>
-          <h3>Entertainment &amp; Leisure</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="dumbbell"></i></div>
-          <h3>Fitness &amp; Sports</h3>
-        </div>
-        <div class="sector-card">
-          <div class="card-icon card-icon-gold"><i data-lucide="factory"></i></div>
-          <h3>Distribution &amp; Manufacturing</h3>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <p style="color: var(--text-light); font-size: 1.02rem; margin-bottom: 20px;">Our recommendations are backed by market demand, investment feasibility, and your personal goals.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Explore Opportunities</a>
+      <div class="fade-in" style="overflow-x:auto;margin-top:32px;">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>What We Compare</th>
+              <th>Franchise Broker</th>
+              <th>MakeMyFranchise (Advisor)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Motivation</td><td>Earns commission from brands</td><td>Earns trust from investors</td></tr>
+            <tr><td>Recommendation basis</td><td>Whoever pays highest commission</td><td>Investor profile &amp; city fit</td></tr>
+            <tr><td>Evaluation</td><td>Brand brochure review</td><td>Data-backed feasibility analysis</td></tr>
+            <tr><td>Transparency</td><td>Hides risks</td><td>Clearly maps risks and challenges</td></tr>
+            <tr><td>Support</td><td>Stops after deal closure</td><td>Continues through launch and beyond</td></tr>
+            <tr><td>Your outcome</td><td>Hope it works</td><td>Structured plan for success</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- ========== HOW IT WORKS ========== -->
-  <section class="challenges">
+  <!-- FOUNDER CALLOUT -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">How It Works</span>
-        <h2>Your Franchise Journey, Simplified</h2>
-      </div>
-      <div class="steps-grid stagger-children">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>Complete Your Profile</h3>
-          <p>We understand your goals, experience, and investment range to build a clear picture.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Personalized Shortlisting</h3>
-          <p>Receive a vetted list of franchise brands that match your profile and goals.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Deep Evaluation</h3>
-          <p>Get market and financial insights, ROI expectations, and risks mapped out.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <h3>Brand Introductions</h3>
-          <p>Connect directly with selected brands and explore detailed franchise models.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">5</div>
-          <h3>Deal Support</h3>
-          <p>We guide you from negotiation to documentation with expert assistance.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">6</div>
-          <h3>Launch &amp; Beyond</h3>
-          <p>We help with rollout planning and brand support for sustainable performance.</p>
+      <div class="founder-callout fade-in">
+        <div class="founder-callout-content">
+          <span class="section-tag">Meet the Founder</span>
+          <h2>Led by Dr. Nagarjuna</h2>
+          <p class="founder-callout-subtitle">Franchise Strategist &bull; IIM-Level Business Strategy &bull; Investment Advisor</p>
+          <p>Dr. Nagarjuna brings a unique blend of academic excellence, strategic thinking and real-world business execution. With deep understanding of how successful franchises scale, he has built MakeMyFranchise into India&rsquo;s most trusted advisor for franchise brands and investors.</p>
+          <p style="margin-top:12px;"><strong>What he stands for:</strong> Ethical and transparent franchise practices. Data-backed decision frameworks. Personalised advisory over one-size-fits-all solutions. His vision is to transform the franchise ecosystem into one where success is repeatable, measurable and attainable.</p>
+          <a href="about.html" class="btn btn-primary" style="margin-top:24px;">Meet Dr. Nagarjuna &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== TESTIMONIALS ========== -->
-  <section class="testimonials-section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Success Stories</span>
-        <h2>What Our Clients Say</h2>
-      </div>
-      <div class="testimonials-grid stagger-children">
-        <div class="testimonial-card">
-          <p class="testimonial-text">MakeMyFranchise didn't just list options — they helped me understand the business I was getting into.</p>
-          <p class="testimonial-author">— Satisfied Franchisee</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">With their strategic insights, we expanded into multiple cities without risk.</p>
-          <p class="testimonial-author">— Franchisor Partner</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">They make data simple, meaningful, and actionable. Truly expert advisors.</p>
-          <p class="testimonial-author">— Business Investor</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA ========== -->
+  <!-- CTA SECTION -->
   <section class="cta-section">
     <div class="container">
-      <div class="fade-in">
+      <div class="cta-content fade-in">
         <h2>Ready to Make Smarter Franchise Decisions?</h2>
-        <p>Unlock tailored advice, deep market insights, and a dedicated franchise strategy team</p>
-        <a href="contact.html" class="btn btn-white btn-lg">Register for Free Consultation</a>
+        <p>Register with us and a franchise expert will reach out to understand your goals and begin creating a custom franchise roadmap built around your success.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-white btn-lg">Book Free Consultation</a>
+          <a href="investors.html" class="btn btn-outline-white btn-lg">Explore Opportunities</a>
+        </div>
+        <p class="cta-note">&#9742; +91 9168516666 &nbsp;&nbsp; &#9993; info@makemyfranchise.in</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <h3>MakeMyFranchise</h3>
-          <p>The IIM Way, Built by IITians. Your strategic partner in franchising across India.</p>
+          <a href="index.html" class="logo footer-logo">
+            <img src="images/logo.jpeg" alt="MakeMyFranchise" class="logo-img logo-img-sm">
+            <span class="logo-text">MakeMyFranchise</span>
+          </a>
+          <p>India&rsquo;s Most Trusted Franchise Advisory Platform. The IIM Way, Built by IITians. We don&rsquo;t sell franchises &mdash; we help you choose the right one.</p>
+          <div class="footer-contact">
+            <p><i data-lucide="phone" class="footer-icon"></i> +91 9168516666</p>
+            <p><i data-lucide="mail" class="footer-icon"></i> info@makemyfranchise.in</p>
+          </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-          <a href="faq.html">FAQ</a>
+          <h4>For Investors</h4>
+          <ul>
+            <li><a href="investors.html#profile">Investor Profiling</a></li>
+            <li><a href="investors.html#compare">Sector Comparison</a></li>
+            <li><a href="investors.html#score">Suitability Score</a></li>
+            <li><a href="investors.html#mistakes">5 Mistakes to Avoid</a></li>
+            <li><a href="investors.html#reality">Investment Reality Check</a></li>
+          </ul>
         </div>
-        <div class="footer-contact">
-          <h4>Contact Us</h4>
-          <p>Ready to start your franchise journey?</p>
-          <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <div class="footer-links">
+          <h4>For Brands</h4>
+          <ul>
+            <li><a href="franchisors.html">Expand Your Brand</a></li>
+            <li><a href="franchisors.html#network">National Partner Network</a></li>
+            <li><a href="franchisors.html#partners">Become a City Partner</a></li>
+            <li><a href="franchisors.html#process">Brand Onboarding</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html#vision">Our Vision</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MakeMyFranchise. All rights reserved.</p>
+        <p>&copy; 2026 MakeMyFranchise. All rights reserved. | India&rsquo;s Franchise Advisory Experts</p>
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

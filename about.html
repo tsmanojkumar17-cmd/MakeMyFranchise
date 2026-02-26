@@ -3,31 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About MakeMyFranchise | Franchise Experts & Growth Consultants</title>
-  <meta name="description" content="Learn how MakeMyFranchise helps brands scale and investors choose the right franchise through strategy, data, and expert consulting leadership.">
+  <title>About MakeMyFranchise - Franchise Experts & Growth Consultants | MakeMyFranchise</title>
+  <meta name="description" content="Learn how MakeMyFranchise helps brands scale and investors choose the right franchise through strategy, data and expert consulting.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
+<body>  <header class="header" id="header">
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <div class="logo-icon">M</div>
-          MakeMyFranchise
+          <img src="images/logo.jpeg" alt="MakeMyFranchise Logo" class="logo-img">
+          <span class="logo-text">MakeMyFranchise</span>
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="has-dropdown">
+            <a href="investors.html">Find Franchise<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="investors.html#profile">Investor Profiling</a></li>
+              <li><a href="investors.html#compare">Sector Comparison</a></li>
+              <li><a href="investors.html#score">Suitability Score</a></li>
+              <li><a href="investors.html#mistakes">5 Mistakes to Avoid</a></li>
+              <li><a href="investors.html#reality">Investment Reality Check</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="investors.html">For Investors<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="investors.html#profile">Profile Yourself</a></li>
+              <li><a href="investors.html#compare">Food vs Salon vs Education</a></li>
+              <li><a href="investors.html#score">Suitability Score Calculator</a></li>
+              <li><a href="investors.html#mistakes">Biggest Investor Mistakes</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="franchisors.html">For Brands<i data-lucide="chevron-down" class="nav-chevron"></i></a>
+            <ul class="dropdown">
+              <li><a href="franchisors.html">Expand Your Brand</a></li>
+              <li><a href="franchisors.html#network">National Partner Network</a></li>
+              <li><a href="franchisors.html#partners">Become a City Partner</a></li>
+              <li><a href="franchisors.html#process">Brand Onboarding Process</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="active">About Us</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Get Started</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Free Consultation</a></li>
         </ul>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -36,131 +58,199 @@
     </div>
   </header>
 
-  <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="container">
-      <h1 class="fade-in">Who We Are &amp; Why We Exist</h1>
-      <p class="fade-in">A Franchise Partner You Can Trust — Strategy, Data, and Expert Guidance</p>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>About MakeMyFranchise</div>
+      <h1>A Franchise Partner <span>You Can Trust</span></h1>
+      <p>Founded on the belief that franchising should be built on clarity, proven strategy and deep business insight &mdash; not commission-driven selling. The IIM Way, Built by IITians.</p>
     </div>
   </section>
 
-  <!-- ========== ABOUT INTRO ========== -->
-  <section class="framework">
+  <!-- MISSION -->
+  <section class="section">
     <div class="container">
-      <div class="about-intro">
-        <div class="about-intro-text fade-in-left">
-          <p>MakeMyFranchise was founded by <strong>Dr. Nagarjuna</strong>, an entrepreneur with academic grounding in business strategy and a passion for building scalable businesses. With a combination of <strong>IIM-level strategic insight</strong>, analytical precision, and real-world business execution, Dr. Nagarjuna leads a team that bridges the gap between ambition and achievement in the franchise ecosystem.</p>
-          <p style="margin-top: 20px; font-size: 1.05rem;">Our mission is simple:</p>
-          <ul style="list-style: none; padding: 0; margin: 12px 0 20px;">
-            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; color: var(--text-light);"><i data-lucide="arrow-right" style="width: 18px; height: 18px; color: var(--accent); flex-shrink: 0;"></i> To help <strong>franchisors scale responsibly</strong></li>
-            <li style="display: flex; align-items: center; gap: 10px; color: var(--text-light);"><i data-lucide="arrow-right" style="width: 18px; height: 18px; color: var(--accent); flex-shrink: 0;"></i> To help <strong>franchisees invest wisely</strong></li>
-          </ul>
-          <p>We are not franchise sellers — we are <strong>franchise strategists and advisors</strong>.</p>
+      <div class="about-intro fade-in">
+        <h2>Our Mission</h2>
+        <p>At MakeMyFranchise, we believe franchising should be built on <strong>clarity, proven strategy and deep business insight.</strong> Unlike platforms that simply list brands, we take a consultative approach &mdash; helping you find right-fit opportunities based on your investment goals, background and growth aspirations.</p>
+        <div style="display:flex;gap:24px;margin-top:24px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:200px;padding:20px;background:var(--blue-50);border-radius:var(--radius);border-left:4px solid var(--primary);">
+            <strong>For Franchisors</strong><br>To help brands scale responsibly with qualified investors and structured systems.
+          </div>
+          <div style="flex:1;min-width:200px;padding:20px;background:var(--blue-50);border-radius:var(--radius);border-left:4px solid var(--secondary);">
+            <strong>For Investors</strong><br>To help franchisees invest wisely through data-backed evaluation and honest advisory.
+          </div>
         </div>
-        <div class="about-intro-image fade-in-right">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="MakeMyFranchise Team Strategy">
-        </div>
+        <p style="margin-top:24px;font-size:1.1rem;font-weight:600;color:var(--primary);">We are not franchise sellers &mdash; we are franchise strategists and advisors.</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOUNDER ========== -->
-  <section class="founder-section">
+  <!-- FOUNDER SECTION -->
+  <section class="section section-alt" id="founder">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Leadership</span>
-        <h2>Dr. Nagarjuna — Founder &amp; Visionary</h2>
+        <span class="section-tag">Founder &amp; Visionary</span>
+        <h2>Dr. Nagarjuna</h2>
+        <p class="founder-title">Franchise Strategist &bull; Ecosystem Builder &bull; Investment Advisor &bull; Industry Reform Voice</p>
       </div>
       <div class="founder-grid fade-in">
-        <div class="founder-image">
-          <i data-lucide="circle-user-round"></i>
-        </div>
-        <div class="founder-info">
-          <h3>Dr. Nagarjuna</h3>
-          <p class="founder-title">Strategist | Franchise Consultant | Growth Architect</p>
-          <p>Dr. Nagarjuna brings a unique blend of academic excellence, strategic thinking, and leadership experience. With a strong foundation in business strategy and a deep understanding of how successful franchises scale, he has built MakeMyFranchise into a trusted advisor for both franchise brands and investors.</p>
-          <p>His vision is to transform the franchise ecosystem into one where success is repeatable, measurable, and attainable.</p>
-          <ul class="founder-values">
-            <li><i data-lucide="check-circle"></i> Ethical and transparent franchise practices</li>
-            <li><i data-lucide="check-circle"></i> Data-backed decision frameworks</li>
-            <li><i data-lucide="check-circle"></i> Personalized advisory over one-size-fits-all solutions</li>
+        <div class="founder-text">
+          <h3>Meet the Founder</h3>
+          <p>Dr. Nagarjuna brings a unique blend of academic excellence, strategic thinking and real-world leadership experience. With a strong foundation in business strategy and a deep understanding of how successful franchises scale, he has built MakeMyFranchise into a trusted advisor for both franchise brands and investors across India.</p>
+          <p style="margin-top:16px;">His academic grounding in business strategy &mdash; at the IIM level &mdash; combined with the analytical precision of IIT-trained thinking, gives MakeMyFranchise a unique advisory edge that no commission-driven portal can replicate.</p>
+          <h4 style="margin-top:24px;">What He Stands For</h4>
+          <ul class="check-list">
+            <li>Ethical and transparent franchise practices</li>
+            <li>Data-backed decision frameworks over gut feel</li>
+            <li>Personalised advisory over one-size-fits-all solutions</li>
+            <li>Investor protection through honest feasibility analysis</li>
+            <li>Responsible brand expansion through qualified partnerships</li>
           </ul>
+          <p style="margin-top:20px;font-style:italic;color:var(--text-light);">&ldquo;My vision is to transform the franchise ecosystem into one where success is repeatable, measurable and attainable for every investor who invests with clarity and confidence.&rdquo;</p>
+          <p style="color:var(--primary);font-weight:600;">&mdash; Dr. Nagarjuna, Founder, MakeMyFranchise</p>
+        </div>
+        <div class="founder-stats">
+          <div class="card">
+            <div class="card-icon card-icon-gold"><i data-lucide="graduation-cap"></i></div>
+            <h3>Academic Foundation</h3>
+            <p>IIM-level business strategy expertise combined with IIT-trained analytical precision &mdash; a rare combination in franchise advisory.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-gold"><i data-lucide="database"></i></div>
+            <h3>Decision Intelligence</h3>
+            <p>Building India&rsquo;s decision intelligence layer for franchise investments &mdash; proprietary scoring models, market intelligence and investor matching systems.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-gold"><i data-lucide="mic"></i></div>
+            <h3>Thought Leadership</h3>
+            <p>Publishing franchise trends, city opportunity reports and investor behaviour insights. Speaking at startup forums, entrepreneurship summits and retail conferences.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-gold"><i data-lucide="network"></i></div>
+            <h3>Ecosystem Builder</h3>
+            <p>Built a national network of city partners, brand relationships and investor communities to power India&rsquo;s most structured franchise advisory platform.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== VALUES / WHY CHOOSE ========== -->
-  <section class="framework">
+  <!-- 5-YEAR VISION ROADMAP -->
+  <section class="section" id="vision">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Why Choose Us</span>
-        <h2>What Sets Us Apart</h2>
+        <span class="section-tag">Our Vision</span>
+        <h2>5-Year Domination Roadmap</h2>
+        <p>A practical and ambitious plan to become India&rsquo;s category leader in franchise advisory.</p>
       </div>
-      <div class="cards-grid cards-grid-2 stagger-children">
-        <div class="card">
-          <div class="card-icon card-icon-gold"><i data-lucide="search"></i></div>
-          <h3>Strategy-First Assessment</h3>
-          <p>Every business opportunity is thoroughly evaluated using a strategic framework before any recommendation is made.</p>
+      <div class="steps-grid stagger-children">
+        <div class="step-card">
+          <div class="step-number">Year 1</div>
+          <h3>Build the Engine</h3>
+          <p>Strong digital presence, initial brand partnerships, investor closures and testimonials. Website, CRM and advisory process fully operational.</p>
         </div>
-        <div class="card">
-          <div class="card-icon card-icon-gold"><i data-lucide="bar-chart-3"></i></div>
-          <h3>Data-Driven Evaluation</h3>
-          <p>Market demand, investment feasibility, and financial viability — all backed by real data and analysis.</p>
+        <div class="step-card">
+          <div class="step-number">Year 2</div>
+          <h3>Become Known</h3>
+          <p>SEO dominance with comparison tools, media mentions and city-specific franchise pages. Become the visible authority trusted by investors across India.</p>
         </div>
-        <div class="card">
-          <div class="card-icon card-icon-gold"><i data-lucide="user-check"></i></div>
-          <h3>Personalized Recommendations</h3>
-          <p>No generic lists — every recommendation is tailored to your capital, city, and personal goals.</p>
+        <div class="step-card">
+          <div class="step-number">Year 3</div>
+          <h3>Data Advantage</h3>
+          <p>Launch proprietary scoring reports, city insights and franchise intelligence tools. Build a data moat that competitors cannot replicate.</p>
         </div>
-        <div class="card">
-          <div class="card-icon card-icon-gold"><i data-lucide="handshake"></i></div>
-          <h3>End-to-End Handholding</h3>
-          <p>From discovery to launch and beyond, we walk with you through every step of the franchise journey.</p>
+        <div class="step-card">
+          <div class="step-number">Year 4</div>
+          <h3>National Network</h3>
+          <p>City partners across 50+ cities, lender tie-ups, property ecosystem integration. MakeMyFranchise becomes franchise infrastructure across India.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Year 5</div>
+          <h3>Category Leader</h3>
+          <p>The recognised name in franchise advisory. Brands prefer us. Investors trust us. Media quotes us. The decision-intelligence layer for Indian franchising.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CTA ========== -->
+  <!-- WHY CHOOSE MMF -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Why Us</span>
+        <h2>Why Choose MakeMyFranchise</h2>
+      </div>
+      <div class="cards-grid stagger-children">
+        <div class="card"><div class="card-icon card-icon-gold"><i data-lucide="target"></i></div><h3>Strategy-First Assessment</h3><p>Every recommendation starts with understanding your goals, budget and market. Data-driven decisions over emotional buying or commission-driven selling.</p></div>
+        <div class="card"><div class="card-icon card-icon-gold"><i data-lucide="bar-chart"></i></div><h3>Data-Driven Evaluation</h3><p>Our suitability scoring model evaluates 7 weighted parameters to quantify franchise compatibility &mdash; a proprietary framework built on real-world franchise outcomes.</p></div>
+        <div class="card"><div class="card-icon card-icon-gold"><i data-lucide="user-check"></i></div><h3>Personalised Recommendations</h3><p>No cookie-cutter shortlists. Your franchise journey is designed around your unique profile &mdash; your city, capital, involvement capacity and growth ambitions.</p></div>
+        <div class="card"><div class="card-icon card-icon-gold"><i data-lucide="handshake"></i></div><h3>End-to-End Handholding</h3><p>From first consultation to successful launch &mdash; we are with you at every step. Transparent, honest and always on your side.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="container">
-      <div class="fade-in">
-        <h2>Ready to Partner with Franchise Experts?</h2>
-        <p>Experience the IIM Way of franchise consulting — strategic, transparent, and results-driven</p>
-        <a href="contact.html" class="btn btn-white btn-lg">Start Your Journey Today</a>
+      <div class="cta-content fade-in">
+        <h2>Ready to Work with India&rsquo;s Most Trusted Franchise Advisors?</h2>
+        <p>Start your conversation with Dr. Nagarjuna&rsquo;s team today. Free consultation. No obligation.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-white btn-lg">Book Free Consultation</a>
+          <a href="investors.html" class="btn btn-outline-white btn-lg">Explore Opportunities</a>
+        </div>
+        <p class="cta-note">&#9742; +91 9168516666 &nbsp;&nbsp; &#9993; info@makemyfranchise.in</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <h3>MakeMyFranchise</h3>
-          <p>The IIM Way, Built by IITians. Your strategic partner in franchising across India.</p>
+          <a href="index.html" class="logo footer-logo">
+            <img src="images/logo.jpeg" alt="MakeMyFranchise" class="logo-img logo-img-sm">
+            <span class="logo-text">MakeMyFranchise</span>
+          </a>
+          <p>India&rsquo;s Most Trusted Franchise Advisory Platform. The IIM Way, Built by IITians. We don&rsquo;t sell franchises &mdash; we help you choose the right one.</p>
+          <div class="footer-contact">
+            <p><i data-lucide="phone" class="footer-icon"></i> +91 9168516666</p>
+            <p><i data-lucide="mail" class="footer-icon"></i> info@makemyfranchise.in</p>
+          </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-          <a href="faq.html">FAQ</a>
+          <h4>For Investors</h4>
+          <ul>
+            <li><a href="investors.html#profile">Investor Profiling</a></li>
+            <li><a href="investors.html#compare">Sector Comparison</a></li>
+            <li><a href="investors.html#score">Suitability Score</a></li>
+            <li><a href="investors.html#mistakes">5 Mistakes to Avoid</a></li>
+            <li><a href="investors.html#reality">Investment Reality Check</a></li>
+          </ul>
         </div>
-        <div class="footer-contact">
-          <h4>Contact Us</h4>
-          <p>Ready to start your franchise journey?</p>
-          <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <div class="footer-links">
+          <h4>For Brands</h4>
+          <ul>
+            <li><a href="franchisors.html">Expand Your Brand</a></li>
+            <li><a href="franchisors.html#network">National Partner Network</a></li>
+            <li><a href="franchisors.html#partners">Become a City Partner</a></li>
+            <li><a href="franchisors.html#process">Brand Onboarding</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html#vision">Our Vision</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MakeMyFranchise. All rights reserved.</p>
+        <p>&copy; 2026 MakeMyFranchise. All rights reserved. | India&rsquo;s Franchise Advisory Experts</p>
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
