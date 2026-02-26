@@ -39,16 +39,31 @@ function initMobileMenu() {
     navLinks.classList.toggle('open');
   });
 
-  // Mobile: tap on dropdown parent toggles submenu
+  // Mobile & Desktop: tap/click on dropdown parent toggles submenu
   navLinks.querySelectorAll('.has-dropdown > a').forEach(link => {
     link.addEventListener('click', (e) => {
+      // On mobile, always toggle
+      // On desktop, toggle on click to support trackpad/touch laptops
+      const item = link.closest('.has-dropdown');
+      const wasOpen = item.classList.contains('open');
+
+      // If the parent link href is '#' or same page, prevent navigation
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        const item = link.closest('.has-dropdown');
-        const wasOpen = item.classList.contains('open');
-        // Close all
-        navLinks.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
-        if (!wasOpen) item.classList.add('open');
+      } else {
+        // On desktop, toggle dropdown and prevent navigation to parent link
+        e.preventDefault();
+      }
+
+      // Close all other dropdowns
+      navLinks.querySelectorAll('.has-dropdown').forEach(d => {
+        if (d !== item) d.classList.remove('open');
+      });
+      // Toggle this one
+      if (!wasOpen) {
+        item.classList.add('open');
+      } else {
+        item.classList.remove('open');
       }
     });
   });

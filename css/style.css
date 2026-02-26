@@ -36,6 +36,12 @@
   --blue-gradient: linear-gradient(135deg, #c06800 0%, #e8820a 50%, #ffaa01 100%);
   --blue-gradient-soft: linear-gradient(135deg, #FFF7ED 0%, #fff8f0 50%, #ffffff 100%);
   --accent-gradient: linear-gradient(135deg, #0062c2 0%, #158ad9 100%);
+  --green: #1a9c5b;
+  --green-light: rgba(26, 156, 91, 0.08);
+  --purple: #7c3aed;
+  --purple-light: rgba(124, 58, 237, 0.08);
+  --blue-card: #0062c2;
+  --blue-card-light: rgba(0, 98, 194, 0.08);
   --white: #ffffff;
   --off-white: #fafaf8;
   --gray-50: #f1f3f5;
@@ -48,6 +54,7 @@
   --gray-700: #343a40;
   --gray-800: #212529;
   --text: #0d1b2a;
+  --text-dark: #1a1a2e;
   --text-light: #4a5568;
   --shadow-sm: 0 2px 8px rgba(232, 130, 10, 0.08);
   --shadow-md: 0 4px 16px rgba(232, 130, 10, 0.12);
@@ -178,6 +185,20 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(232, 130, 10, 0.2);
   color: var(--primary) !important;
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white) !important;
+  border: 2px solid var(--white);
+  font-weight: 700;
+}
+
+.btn-outline-white:hover {
+  background: var(--white);
+  color: var(--primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-lg {
@@ -830,6 +851,12 @@ section {
   width: 52px;
   height: 52px;
   font-size: 1.5rem;
+  background: var(--accent-light);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-card h3 {
@@ -1529,6 +1556,10 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .audience-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
   .challenge-items {
     grid-template-columns: 1fr;
   }
@@ -1615,14 +1646,14 @@ section {
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   min-width: 230px;
   background: #fff;
   border-radius: var(--radius);
   box-shadow: 0 8px 32px rgba(232, 130, 10, 0.12), 0 2px 8px rgba(0,0,0,0.08);
-  padding: 8px 0;
+  padding: 12px 0 8px 0;
   list-style: none;
   opacity: 0;
   visibility: hidden;
@@ -1631,6 +1662,16 @@ section {
   transform: translateX(-50%) translateY(6px);
   z-index: 200;
   border-top: 3px solid var(--primary);
+}
+
+/* Bridge the gap so hover doesn't break when moving into the dropdown */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 .has-dropdown:hover .dropdown,
@@ -1701,11 +1742,12 @@ section {
 /* ---------- Comparison Table ---------- */
 .comparison-table {
   width: 100%;
-  border-collapse: collapse;
-  border-radius: var(--radius);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   font-size: 0.95rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 .comparison-table thead tr {
@@ -1714,21 +1756,39 @@ section {
 }
 
 .comparison-table thead th {
-  padding: 16px 20px;
+  padding: 20px 24px;
   text-align: left;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   border: none;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comparison-table thead th:first-child {
+  width: 22%;
+}
+
+.comparison-table thead th:nth-child(2) {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.comparison-table thead th:nth-child(3) {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .comparison-table tbody tr {
   border-bottom: 1px solid var(--gray-100);
-  transition: background 0.15s ease;
+  transition: background 0.2s ease;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: var(--blue-50);
 }
 
 .comparison-table tbody tr:hover {
-  background: var(--blue-50);
+  background: rgba(232, 130, 10, 0.06);
 }
 
 .comparison-table tbody tr:last-child {
@@ -1736,15 +1796,33 @@ section {
 }
 
 .comparison-table tbody td {
-  padding: 14px 20px;
+  padding: 18px 24px;
   color: var(--text-light);
-  vertical-align: top;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 .comparison-table tbody td:first-child {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
   white-space: nowrap;
+  background: rgba(232, 130, 10, 0.03);
+}
+
+.comparison-table tbody td:nth-child(2) {
+  color: #b91c1c;
+  background: rgba(185, 28, 28, 0.03);
+}
+
+.comparison-table tbody td:nth-child(3) {
+  color: var(--green);
+  font-weight: 600;
+  background: rgba(26, 156, 91, 0.03);
 }
 
 /* ---------- Check List ---------- */
@@ -1799,6 +1877,12 @@ section {
 }
 
 /* ---------- Audience Card ---------- */
+.audience-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
 .audience-card {
   border-top: 4px solid var(--primary);
   transition: var(--transition);
@@ -1808,6 +1892,49 @@ section {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
+
+/* Audience Card Color Variants */
+.audience-card.card-franchise {
+  border-top-color: var(--primary);
+}
+.audience-card.card-franchise .card-icon {
+  background: var(--accent-light);
+  color: var(--primary);
+}
+
+.audience-card.card-brand {
+  border-top-color: var(--blue-card);
+}
+.audience-card.card-brand .card-icon {
+  background: var(--blue-card-light);
+  color: var(--blue-card);
+}
+
+.audience-card.card-startup {
+  border-top-color: var(--green);
+}
+.audience-card.card-startup .card-icon {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.audience-card.card-expert {
+  border-top-color: var(--purple);
+}
+.audience-card.card-expert .card-icon {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+.audience-card.card-franchise h3 { color: var(--primary-dark); }
+.audience-card.card-brand h3 { color: var(--blue-card); }
+.audience-card.card-startup h3 { color: var(--green); }
+.audience-card.card-expert h3 { color: var(--purple); }
+
+.audience-card.card-franchise:hover { border-top-color: var(--primary-dark); }
+.audience-card.card-brand:hover { border-top-color: var(--secondary); }
+.audience-card.card-startup:hover { border-top-color: #148a4e; }
+.audience-card.card-expert:hover { border-top-color: #6d28d9; }
 
 /* ---------- Form Select Styling ---------- */
 .contact-form select {
@@ -2132,6 +2259,150 @@ section {
 }
 
 /* ---------- Founder Callout ---------- */
+
+/* ---------- Expert Network Section ---------- */
+.expert-network-section {
+  background: linear-gradient(135deg, #1e0a3c 0%, #2d1b69 50%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.expert-network-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.expert-network-section::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(232, 130, 10, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.expert-network-section .section-tag {
+  color: #c4b5fd;
+  background: rgba(124, 58, 237, 0.2);
+}
+
+.expert-network-split {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.expert-network-text h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.expert-network-text p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+}
+
+.expert-features {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.expert-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.expert-feature i {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: #c4b5fd;
+  margin-top: 2px;
+}
+
+.expert-network-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.expert-sector-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 20px 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.expert-sector-card:hover {
+  background: rgba(124, 58, 237, 0.18);
+  border-color: rgba(196, 181, 253, 0.4);
+  transform: translateY(-3px);
+}
+
+.expert-sector-card i {
+  width: 28px;
+  height: 28px;
+  color: var(--primary-light);
+}
+
+.expert-sector-card span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 1024px) {
+  .expert-network-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .expert-network-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .expert-network-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .expert-sector-card {
+    padding: 14px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-network-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .founder-callout {
   background: var(--blue-50);
   border-radius: var(--radius-lg);
@@ -2186,7 +2457,7 @@ section {
 /* ---------- Footer Enhancements ---------- */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -2248,6 +2519,18 @@ section {
   margin-top: 20px;
   font-size: 0.9rem;
   opacity: 0.85;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  min-width: 220px;
 }
 
 /* ---------- Contact Page Enhancements ---------- */
@@ -2334,7 +2617,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-brand {
     grid-column: 1 / -1;
