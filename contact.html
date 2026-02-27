@@ -59,6 +59,13 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Free Consultation</a></li>
+        </ul>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
   <section class="page-hero">
     <div class="container">
@@ -75,7 +82,11 @@
         <div class="contact-form-wrapper">
           <h2>Franchise Enquiry Form</h2>
           <p style="color:var(--text-light);margin-bottom:28px;">Fill in your details and our team will get back to you with curated franchise options matched to your profile.</p>
-          <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <form class="contact-form" action="https://formsubmit.co/info@makemyfranchise.in" method="POST" onsubmit="handleFormSubmit(event)">
+            <input type="hidden" name="_subject" value="New Franchise Enquiry – MakeMyFranchise">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://makemyfranchise.in/contact.html?thanks=1">
             <div class="form-group">
               <label>I am a&hellip;</label>
               <select name="type" required>
